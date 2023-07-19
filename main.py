@@ -4,26 +4,30 @@ from backend import get_data
 
 st.title('Pronóstico del tiempo para los siguientes días')
 place = st.text_input('Lugar: ')
-days = st.slider('Pronostico del tiempo', min_value=1, max_value=5, help='Seleccione el número de días.')
-option = st.selectbox('Select data to view',('Temperatura','Clima'))
+days = st.slider('Pronóstico del tiempo', min_value=1, max_value=5, help='Seleccione el número de días.')
+option = st.selectbox('Seleccionar para ver',('Temperatura','Clima'))
 st.subheader(f'{option} para los {days} siguientes días en {place}')
 
-if place:
-    try:
+if place: 
+    try:  # Se configura un try y un except para cuando no exista la ciudad.
         # Traer los datos de temperatura y cielo.
-        filtered_data = get_data(place, days)
+        filtered_data = get_data(place, days) # Comunicación con el script backend.
 
         if option == 'Temperatura':
-            #Se divide para 10 ya que no muestra bien los datos de temperatura
-            #Coloco en una lista lo que saco de un diccionario de los datos filtrados
+            #Los datos que se encuentran en el diccionario extraido se divide para 10 
+            #ya que no muestra bien los datos de temperatura (muestra en centenas y mas.)
+            #Coloco en una lista lo que saco de un diccionario de los datos filtrados.
             temperatures = [dict['main']['temp']/10 for dict in filtered_data]
+            #Lo mismo se realiza para los días.
             dates = [dict['dt_txt'] for dict in filtered_data]
             # Crear el grafico de temperatura.
             figure = px.line(x=dates, y=temperatures, labels={'x':'Día', 'y':'Temperatura (C)'})
             st.plotly_chart(figure)
 
         if option == 'Clima':
-            # se genera un dict, ya que de la data que sale con la API, sale, Clear, Clouds, etc...
+            #Se genera un dict, ya que de la data que sale con la API, sale, Clear, Clouds, etc...
+            #La idea es generar una {llave:valor} con lo que sale del conjunto de datos con la API
+            #y las imágenes.
             images = {'Clear':'images/clear.png','Clouds':'images/cloud.png','Rain':'images/rain.png','Snow':'images/snow.png'}
             sky_conditions = [dict['weather'][0]['main'] for dict in filtered_data]
             dates = [dict['dt_txt'] for dict in filtered_data]
