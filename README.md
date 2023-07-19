@@ -8,8 +8,9 @@ Los datos son extraidos a través del script backend.py. En el mismo se a constr
 
 Para mostrar los datos, se escribe el lugar y se selecciona la variable a visualizar, que en este caso es temperatura. De igual forma se mueve el slider del número de días y se obtiene la siguiente gráfica:
 
-![temperatura](https://github.com/krist2357/app7/assets/75154211/08205ec4-9e31-4e51-b5a4-78a06a90c8fd)
+![temperatura](https://github.com/krist2357/app7/assets/75154211/5dc8b93d-8735-4cab-967e-6024a841df07)
 
 Para el caso de revisar el clima, se selecciona clima y se obtiene para un día:
 
-![clima](https://github.com/krist2357/app7/assets/75154211/e6109582-83a5-400f-a898-2d8f274451ba)
+![clima](https://github.com/krist2357/app7/assets/75154211/724d938c-474c-49df-a389-561a87db1866)
+
