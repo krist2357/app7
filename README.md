@@ -1,6 +1,5 @@
 # DASHBOARD DE PRONÓSTICO DEL TIEMPO EN EL MUNDO
 
-El presente proyecto, se lo a realizado en streamlit. El mismo muestra la temperatura de 1 a 5 días y de igual forma muestra el pronostico del clima de 1 a 5 días con imágenes y fecha.
 El presente proyecto se lo a realizado en streamlit. El mismo muestra la temperatura de 1 a 5 días y de igual forma muestra el pronóstico del clima de 1 a 5 días con imágenes y fecha.
 
 El programa consta de dos scripts, uno denominado main.py, que muestra los datos en un dashboard mediante la aplicación web streamlit.
