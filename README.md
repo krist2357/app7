@@ -14,3 +14,6 @@ Para el caso de revisar el clima, se selecciona clima y se obtiene para un día:
 
 ![clima](https://github.com/krist2357/app7/assets/75154211/724d938c-474c-49df-a389-561a87db1866)
 
+Bibliografía:
+* https://pythonhow.com/python-paid-course/, Ardit Sulce
+* Learn Python Programming, Fabrizio Romano, Heinrich Kruger, Packt, Third Edition.
